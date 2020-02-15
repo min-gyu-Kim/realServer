@@ -1,0 +1,16 @@
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color:forestgreen;
+}
+
+p{
+    margin: 0; padding: 0;
+}

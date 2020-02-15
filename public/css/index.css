@@ -1,0 +1,418 @@
+
+.container{
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.modal{
+    display: none;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    position: fixed;
+    left: 0; top:0;
+}
+
+.login{
+    margin: auto;
+    width: 60%;
+    height: 70%;
+    background: white;
+    margin-top: 10%;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.8);
+}
+
+.login form{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+}
+
+.login form h2{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: 5px;
+}
+
+.login form label{
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 10%;
+    margin-top: 20px;
+    display: block;
+}
+
+.login form input[type= text], input[type=password]{
+    font-size: 22px;
+    margin-left: 10%;
+    width: 80%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+    margin-top: 10px;
+}
+
+.login form button{
+    width: 80%;
+    border: none;
+    color: white;
+    margin-left: 10%;
+    background: #0100FF;
+    font-size: 30px;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+.login form button:hover{
+    background: #6D6CFF;
+}
+
+.login form div{
+    text-align: center;
+}
+
+.close{
+    text-align: right;
+}
+
+.close button{
+    border: none;
+    background: inherit;
+}
+
+.close button:hover{
+    background: #EAEAEA;
+    cursor: pointer;
+}
+
+.close i{
+    font-size: 50px;
+}
+
+.header{
+    margin-bottom: 20px;
+}
+
+.header .container{
+    background: url(../img/banner.gif) no-repeat;
+    background-size: cover;
+    height: 300px; text-align: center;
+}
+
+.header h2{
+    font-family: 'Nanum Pen Script', cursive;
+    color: white; display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 110px; font-size: 50px;
+    transition: all 0.2s ease-in-out;
+    padding: 10px 50px 10px 50px;
+}
+
+.header h2:hover{
+    box-shadow: inset -126.5px 0 0 0 rgba(80, 80, 250, 0.3),
+        inset 126.5px 0 0 0 rgba(80, 80, 250, 0.3);
+}
+
+.user{
+    margin: 10px;
+}
+
+.user a{
+    font-size: 20px;
+}
+
+.banner{
+    width: 100%;
+    height: 300px;
+}
+
+#sideMenu{
+    position:fixed;
+    width: 0%; display: none;
+    right: 0; top: 0;
+    background-color: #FCFCFC;
+    height: 100%;
+    border-left: 1px solid gray;
+    z-index: 1;
+}
+
+.header i{
+    position: fixed;
+    right: 0; top:0;
+    z-index: 2;
+    margin: 10px 10px;
+    font-size: 40px;
+    border-radius: 50%;
+    color:#3736FF; cursor: pointer;
+}
+
+.user i{
+    font-size: 40px;
+}
+.user button{
+    background: #53FF4C;
+    border: none;
+    width: 50%;
+    font-size: 30px;
+}
+
+.user button:hover{
+    background: #ADFFA6;
+}
+
+.menu_nav{
+    border-top: 1px solid #999999;
+    display: block; margin-top: 100px;
+}
+
+.menu_nav h3{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 22px; position:relative;
+    color:#00D8FF; padding-left: 10px;
+    display: inline-block; margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu_nav h3:before{
+    content:'';
+    position:absolute;
+    left:5px; top:10px;
+    border-radius: 50%;
+    width: 5px; height: 5px;
+    background-color: #00D8FF;
+}
+
+.menu_nav h3:after{
+    content:'';
+    position:absolute;
+    height: 1px; width: 90%;
+    left: 10px; bottom: 0;
+    background-color: #00D8FF;
+}
+
+.menu_nav ul{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 0px;
+}
+
+.menu_nav a{
+    text-decoration: none;
+    font-family: 'Nanum Myeongjo', serif;
+    color: black;
+}
+
+.menu_nav li{
+    list-style: none; display: inline-block;
+    padding-top: 20px; width: 100%;
+    padding-left: 20px; padding-bottom: 20px;
+    transition: background-color 0.5s ease-in-out;
+    font-size: 18px; font-weight: bold;
+}
+
+.menu_nav li:hover{
+    background-color: aqua;
+}
+
+main section{
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+.schedule table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.schedule th, td {
+    text-align: center;
+    padding: 13px;
+    width: 30%
+}
+
+.schedule th:last-child, td:last-child{
+    width: 40%;
+}
+
+.schedule tr:not(:first-child):hover{
+    cursor: pointer;
+}
+
+.schedule tr:not(:first-child):nth-child(odd):hover{
+    background-color: #eee;
+}
+
+.schedule tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.schedule tr:nth-child(even):hover{
+    background-color: #e2e2e2;
+}
+
+.posts{
+    border-left: 1px solid gray;
+    box-sizing: border-box;
+}
+
+article{
+    display: block;
+}
+
+.all_friends{
+}
+
+.contents{
+    margin:auto;
+    width: 90%;
+    border-bottom: 1px solid aqua;
+}
+
+.contents h3{
+    position: relative;
+    padding-left: 10px;
+}
+
+.more{
+    text-align: right;
+}
+
+.contents a{
+    text-decoration: none;
+    color: black;
+}
+
+.contents i{
+    font-size: 18px;
+    padding-right: 5px;
+}
+
+.contents ul{
+    padding-left: 15px;
+}
+
+.contents li{
+    display: inline-block;
+    width: 100%;
+}
+
+.contents a i{
+    transition: all 0.5s ease;
+}
+
+.contents a:hover{
+    color:forestgreen;
+}
+
+.contents a:hover i{
+    transform: rotate(-90deg);
+}
+
+.post li{
+    list-style: circle;
+    overflow-x: hidden;
+}
+
+.post span{
+    float:right;
+    font-size: 13px;
+}
+
+.gallery ul{
+    padding: 0;
+}
+
+.gallery li{
+    width: 49%;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.gallery a:hover li{
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+.gallery li img{
+    width: 100%;
+}
+
+.gallery_tit{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#footer{
+    width: 100%;
+    height: 100px;
+    display: inline-block;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+#footer .container{
+    background: black;
+    height: inherit;
+}
+
+.myInfo{
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 600px){
+    .posts{
+        border: 0;
+    }
+    main section{
+        width: 100%;
+    }
+    .friends{
+        border-right: 0;
+    }
+    .notice .contents li,.post .contents li{
+        width: 49%;
+    }
+    .contents{
+        margin:0;
+    }
+    .login{
+        width: 90%;
+        height: 90%;
+    }
+    
+    .login form h2{
+        margin-top: 50%;
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 380px){
+    .contents{
+        margin:auto;
+    }
+    .gallery li{
+        width: 90%;
+        text-align: center;
+    }
+    
+    h2, h3{
+        font-size: 50px; 
+    }
+    
+    a, li, i, th, td, span, .gallery_tit, .menu_head ul a{
+        font-size: 40px;
+    }
+    
+    ul li a{
+        font-size: 25px;
+    }
+}

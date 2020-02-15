@@ -1,0 +1,41 @@
+.allUser table{
+    width: 100%;
+}
+
+.allUser tr:not(:first-child):hover{
+    cursor: pointer; background: rgba(0, 0, 0, 0.3);
+}
+
+.allUser table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.allUser th, td {
+    text-align: center;
+    padding: 13px;
+    width: 30%
+}
+
+.allUser th:last-child, td:last-child{
+    width: 40%;
+}
+
+.allUser tr:not(:first-child):hover{
+    cursor: pointer;
+}
+
+.allUser tr:not(:first-child):nth-child(odd):hover{
+    background-color: #eee;
+}
+
+.allUser tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.allUser tr:nth-child(even):hover{
+    background-color: #e2e2e2;
+}

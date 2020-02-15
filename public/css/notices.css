@@ -1,0 +1,50 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+th, td {
+    text-align: center;
+    padding: 13px;
+    width: 20%
+}
+
+th:nth-child(2), td:nth-child(2){
+    width: 40%;
+}
+
+tr:not(:first-child):hover{
+    cursor: pointer;
+}
+
+tr:not(:first-child):nth-child(odd):hover{
+    background-color: #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even):hover{
+    background-color: #e2e2e2;
+}
+
+.write_btn{
+    text-align: right;
+}
+
+.write_btn button{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    background: rgba(0, 255, 0, 0.5);
+}
+
+.write_btn button:hover{
+    background: rgba(0, 255, 0, 0.2);
+    cursor: pointer;
+}

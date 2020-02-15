@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>울산 병신들</title>
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/showNotice.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Nanum+Pen+Script|Odibee+Sans&display=swap" rel="stylesheet">
+        
+        <script src="https://use.fontawesome.com/55a2141ee7.js"></script>
+        
+        <script type="text/javascript" src="/js/index.js"></script>
+    </head>
+    <body>
+        <div class="modal">
+            <div class="login">
+                <div class="close">
+                    <button type="button" onclick="modalClose()">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <form method="post" action="/user/login">
+                    <h2>Login</h2>
+                    <label>ID</label>
+                    <input type="text" name="id" placeholder="Enter the ID">
+                    <label>Password</label>
+                    <input type=password name="password" placeholder="Enter the Password">
+                    <button type="submit">login!</button>
+                    <br><br>
+                    <div>
+                        가입 문의: 010-53853-7592
+                        <p>김민규 </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <header>
+            <div class="header">
+                <i class="fa fa-bars" aria-hidden="true" onclick="slideMenu()"></i>
+                <div class="container">
+                    <a href="/"><h2>울산 병신들</h2></a>
+                </div>
+            </div>
+        </header>
+        <nav id="nav">
+            <div id="sideMenu">
+                <div class="user">
+                    <%- authUser %>
+                </div>
+                <div class="menu_nav">
+                    <div class="menu_head">
+                        <h3>친구들</h3>
+                        <ul>
+                            <a href="/user/showAll"><li>전체 친구 목록</li></a>
+                            <a href="#"><li>친구 찾기</li></a>
+                            <a href="#"><li>일정</li></a>
+                        </ul>
+                    </div>
+                    <div class="menu_head">
+                        <h3>게시물</h3>
+                        <ul>
+                            <a href="/notice/showAll"><li>공지사항</li></a>
+                            <a href="/post/showAll"><li>게시판</li></a>
+                            <a href="#"><li>갤러리</li></a>
+                            <a href="#"><li>게임</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="showNotice">
+                    <div class="not_title">
+                        <label>제목</label>
+                        <span><%- notTitle %></span>
+                    </div>
+                    <div class="not_info">
+                        <span class="not_name">
+                            <label>작성자</label>
+                            <span><%- notName %></span>
+                        </span>
+                        <label>작성 날짜</label>
+                        <span><%- notDate %></span>
+                    </div>
+                    <div class="not_content">
+                        <label>내용</label>
+                        <div class="notContent">
+                            <%- notContent %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="footer">
+            <div class="container">
+                <div class="myInfo">
+                    <br>
+                    <p>개발자 : 김민규</p>
+                    <p>연락처 : 010-5385-7592</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

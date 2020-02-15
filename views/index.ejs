@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>울산 병신들</title>
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/index.css">
+        
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Nanum+Pen+Script|Odibee+Sans&display=swap" rel="stylesheet">
+        
+        <script src="https://use.fontawesome.com/55a2141ee7.js"></script>
+        
+        <script type="text/javascript" src="/js/index.js"></script>
+    </head>
+    <body>
+        <div class="modal">
+            <div class="login">
+                <div class="close">
+                    <button type="button" onclick="modalClose()">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <form method="post" action="/user/login">
+                    <h2>Login</h2>
+                    <label>ID</label>
+                    <input type="text" name="id" placeholder="Enter the ID">
+                    <label>Password</label>
+                    <input type=password name="password" placeholder="Enter the Password">
+                    <button type="submit">login!</button>
+                    <br><br>
+                    <div>
+                        가입 문의: 010-53853-7592
+                        <p>김민규 </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <header>
+            <div class="header">
+                <i class="fa fa-bars" aria-hidden="true" onclick="slideMenu()"></i>
+                <div class="container">
+                    <a href="/"><h2>울산 병신들</h2></a>
+                </div>
+            </div>
+        </header>
+        <nav id="nav">
+            <div id="sideMenu">
+                <div class="user">
+                    <%- authUser %>
+                </div>
+                <div class="menu_nav">
+                    <div class="menu_head">
+                        <h3>친구들</h3>
+                        <ul>
+                            <a href="/user/showAll"><li>전체 친구 목록</li></a>
+                            <a href="#"><li>친구 찾기</li></a>
+                            <a href="#"><li>일정</li></a>
+                        </ul>
+                    </div>
+                    <div class="menu_head">
+                        <h3>게시물</h3>
+                        <ul>
+                            <a href="/notice/showAll"><li>공지사항</li></a>
+                            <a href="/post/showAll"><li>게시판</li></a>
+                            <a href="#"><li>갤러리</li></a>
+                            <a href="#"><li>게임</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <section class="friends">
+                    <article class="all_friends">
+                        <div class="contents">
+                            <h3>전체 친구 목록</h3>
+                            <ul>
+                                <%- users %>
+                            </ul>
+                            <div class="more">
+                                <a href="/user/showAll"><i class="fa fa-sort-desc" aria-hidden="true"></i>더보기</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="game">
+                        <div class="contents">
+                            <h3>게임</h3>
+                            <ul>
+                                <li>내전 전적1</li>
+                                <li>내전 전적2</li>
+                                <li>내전 전적3</li>
+                            </ul>
+                            <div class="more">
+                                <a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i>더보기</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="schedule">
+                        <div class="contents">
+                            <h3>일정</h3>
+                            <table>
+                                <tr>
+                                    <th>시작 날짜</th>
+                                    <th>종료 날짜</th>
+                                    <th>내용</th>
+                                </tr>
+                                <tr onclick="location.href='#'">
+                                    <td>2020/04/07</td>
+                                    <td>2020/04/07</td>
+                                    <td>롤내전</td>
+                                </tr>
+                                <tr onclick="location.href='#'">
+                                    <td>2020/04/07</td>
+                                    <td>2020/04/07</td>
+                                    <td>롤내전2</td>
+                                </tr>
+                            </table>
+                            <div class="more">
+                                <a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i>더보기</a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="posts">
+                    <article class="notice">
+                        <div class="contents">
+                            <h3>공지사항</h3>
+                            <ul>
+                                <%- notices %>
+                            </ul>
+                            <div class="more">
+                                <a href="/notice/showAll"><i class="fa fa-sort-desc" aria-hidden="true"></i>더보기</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="post">
+                        <div class="contents">
+                            <h3>게시판</h3>
+                            <ul>
+                                <%- posts %>
+                            </ul>
+                            <div class="more">
+                                <a href="/post/showAll"><i class="fa fa-sort-desc" aria-hidden="true"></i>더보기</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="gallery">
+                        <div class="contents">
+                            <h3>갤러리</h3>
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <img src="img/gallery1.jpg">
+                                        <p class="gallery_tit">친구들 사진1</p>
+                                        김민규
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="img/gallery2.jpg">
+                                        <p class="gallery_tit">친구들 사진2</p>
+                                        김민규
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="img/gallery3.jpg">
+                                        <p class="gallery_tit">친구들 사진3</p>
+                                        김민규
+                                    </li>
+                                </a>
+                            </ul>
+                            <div class="more">
+                                <a href="#"><i class="fa fa-sort-desc" aria-hidden="true"></i>더보기</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article></article>
+                </section>
+            </div>
+        </main>
+        <div id="footer">
+            <div class="container">
+                <div class="myInfo">
+                    <br>
+                    <p>개발자 : 김민규</p>
+                    <p>연락처 : 010-5385-7592</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

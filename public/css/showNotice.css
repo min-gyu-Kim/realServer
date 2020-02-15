@@ -1,0 +1,30 @@
+.not_title, .not_info, .not_content{
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.showNotice label{
+    background: lightgray;
+    font-size: 22px;
+    padding: 0 10px 0 10px;
+}
+
+.showNotice span:nth-child(2){
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.not_name{
+    width: 50%;
+}
+
+.not_info span:first-child{
+    display: inline-block;
+}
+
+.notContent{
+    margin-top: 10px;
+    font-size: 20px;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.8);
+    height: 300px;
+    overflow-y: scroll;
+}
