@@ -1,0 +1,47 @@
+.image_form{
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.8);
+    transition: box-shadow 0.3s ease-in-out;
+    width: 23%;
+    display: inline-block; margin: 5px;
+}
+
+.image_form:hover{
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.image_form .image{
+    /*max-height: 250px;*/
+}
+
+.image_form img{
+    width: 100%;
+    display: block;
+}
+
+.img_info{
+    text-align: center;
+}
+
+.img_info p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.writeImg{
+    text-align: right;
+}
+
+.writeImg button{
+    margin-top: 40px;
+    padding: 10px 15px 10px 15px;
+    font-size: 22px;
+    background: rgba(0,255,0, 0.6);
+    font-weight: bold;
+    transition: background 0.4s ease-in-out;
+}
+
+.writeImg button:hover{
+    background: rgba(0,255,0, 0.3);
+    cursor: pointer;
+}

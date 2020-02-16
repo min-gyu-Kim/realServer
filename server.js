@@ -10,7 +10,7 @@ var static = require('serve-static');
 
 var app = express();
 
-var config = require('./config');
+var config = require('./config/config');
 
 require('./database/database_loader').init(app, config);
 

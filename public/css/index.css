@@ -409,6 +409,9 @@ article{
         width: 90%;
         text-align: center;
     }
+    .ul a{
+        background: rgba(0,0,0,0.1);
+    }
     /*
     h2, h3{
         font-size: 50px; 

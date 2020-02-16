@@ -6,7 +6,7 @@
         <title>울산 병신들</title>
         <link rel="stylesheet" href="/css/reset.css">
         <link rel="stylesheet" href="/css/index.css">
-        <link rel="stylesheet" href="/css/notices.css">
+        <link rel="stylesheet" href="/css/gallery.css">
         
         <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Nanum+Pen+Script|Odibee+Sans&display=swap" rel="stylesheet">
         
@@ -73,19 +73,11 @@
         </nav>
         <main>
             <div class="container">
-                <div class="notices">
-                    <table>
-                        <tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>작성일자</th>
-                        </tr>
-                        <%- posts %>
-                    </table>
-                    <div class="write_btn">
-                        <%- user %>
-                    </div>
+                <div class="images">
+                    <%- images %>
+                </div>
+                <div class="writeImg">
+                    <%- user %>
                 </div>
             </div>
         </main>
