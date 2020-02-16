@@ -28,8 +28,9 @@ var showGalleryAll = function(req, res){
     var database = req.app.get('database');
     database.GalleryModel.find({}).exec(function(err, datas){
         var images ='';
-        datas.forEach(function(item, index){
-            images += '<div class="image_form" onclick="location.href=\'/gallery/show?num=' + item.number + '\'"><div class="image">' +  cloudinary.image(item.img_url) + '</div><div class="img_info"><p class="imgTitle">' + item.title + '</p><div class="imgName">' + item.name + '</div></div></div>';
+        res.send(cloudinary.image(datas[0].img_url))
+        /*datas.forEach(function(item, index){
+            images += '<div class="image_form" onclick="location.href=\'/gallery/show?num=' + item.number + '\'"><div class="image">' + cloudinary.image(item.img_url, {quality: "auto", fetch_format: "auto"}) + '"</div><div class="img_info"><p class="imgTitle">' + item.title + '</p><div class="imgName">' + item.name + '</div></div></div>';
         });
         
         var context = {
@@ -38,7 +39,7 @@ var showGalleryAll = function(req, res){
             images: images
         };
 
-        res.render('gallerys', context);
+        res.render('gallerys', context);*/
     })
 }
 
@@ -82,7 +83,7 @@ var uploadImage = function(req, res){
                     
                     var url = image.public_id + require('path').extname(image.url);
                   
-                  console.log(image);
+                    console.log(image);
                       
                     addGallery(req.app.get('database'), req.body.title, url, req.session.user.name, function(err, docs){
                         if(err){
