@@ -7,6 +7,7 @@ var expressSession = require('express-session');
 
 var path = require('path');
 var static = require('serve-static');
+var fs = require('fs');
 
 var app = express();
 
@@ -35,4 +36,8 @@ require('./routes/routes_loader').init(app, express.Router());
 
 http.createServer(app).listen(app.get('port'), function(){
    console.log('서버 오픈 port : ' + app.get('port')); 
+    var dir = __dirname + '/uploads';
+    if (!path.existsSync(dir)) {
+        fs.mkdirSync(dir, 0744);
+    }
 });
