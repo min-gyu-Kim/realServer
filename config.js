@@ -5,7 +5,8 @@ module.exports = {
         {file: './user_schema', collection: 'users', schemaName: 'UserSchema', modelName: 'UserModel'},
         {file: './post_schema', collection: 'post', schemaName: 'PostSchema', modelName: 'PostModel'},
         {file: './notice_schema', collection: 'notice', schemaName: 'NoticeSchema', modelName: 'NoticeModel'
-        }
+        },
+        {file: './gallery_schema', collection: 'gallery', schemaName:'GallerySchema', modelName: 'GalleryModel'}
     ],
     route_info: [
         {file: './home', type: 'get', method: 'goHome', path: '/'},
@@ -20,6 +21,9 @@ module.exports = {
         {file:'./post', type: 'get', method: 'showAllPost', path: '/post/showAll'},
         {file:'./post', type: 'get', method: 'ShowWritePost', path: '/post/showWrite'},
         {file:'./post', type: 'post', method: 'writeNotice', path: '/post/write'},
-        {file: './post', type: 'get', method: 'showPost', path: '/post/show'}
+        {file: './post', type: 'get', method: 'showPost', path: '/post/show'},      //여기서부터 갤러리
+        {file: './gallery', type: 'get', method: 'showGalleryAll', path: '/gallery/showAll'},
+        {file: './gallery', type: 'get', method: 'showWriteGallery', path: '/gallery/showWrite'},
+        {file: './gallery', type: 'post', method: 'uploadImage', path: '/gallery/upload'}
     ]
 }
