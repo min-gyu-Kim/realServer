@@ -11,12 +11,10 @@
 }
 
 .image_form .image{
-    height: 250px;
 }
 
 .image_form img{
     width: 100%;
-    display: block;
 }
 
 .img_info{

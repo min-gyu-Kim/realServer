@@ -5,6 +5,7 @@ Schema.createSchema = function(mongoose){
         number: {type: Number, required: true, unique: true },
         name: {type: String, required: true },
         img_url: {type: String},
+        public_id: {type: String},
         date: {type: Date, 'default': Date.now},
         title: {type: String, required: true},
         views: {type: Number, default: 0}

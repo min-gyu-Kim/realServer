@@ -28,8 +28,7 @@ var showGalleryAll = function(req, res){
     var database = req.app.get('database');
     database.GalleryModel.find({}).exec(function(err, datas){
         var images ='';
-        res.send(cloudinary.image(datas[0].img_url))
-        /*datas.forEach(function(item, index){
+        datas.forEach(function(item, index){
             images += '<div class="image_form" onclick="location.href=\'/gallery/show?num=' + item.number + '\'"><div class="image">' + cloudinary.image(item.img_url, {quality: "auto", fetch_format: "auto"}) + '"</div><div class="img_info"><p class="imgTitle">' + item.title + '</p><div class="imgName">' + item.name + '</div></div></div>';
         });
         
@@ -39,7 +38,7 @@ var showGalleryAll = function(req, res){
             images: images
         };
 
-        res.render('gallerys', context);*/
+        res.render('gallerys', context);
     })
 }
 
@@ -84,8 +83,13 @@ var uploadImage = function(req, res){
                     var url = image.public_id + require('path').extname(image.url);
                   
                     console.log(image);
+                  
+                    var img = {
+                        url: image.url,
+                        id: image.public_id
+                    }
                       
-                    addGallery(req.app.get('database'), req.body.title, url, req.session.user.name, function(err, docs){
+                    addGallery(req.app.get('database'), req.body.title, img, req.session.user.name, function(err, docs){
                         if(err){
                             console.log(err.stack);
                             res.send(err);
@@ -99,9 +103,9 @@ var uploadImage = function(req, res){
 }
 
 // ----------- 일반 함수들 ---------
-var addGallery = function(database, title, img_url, name, callback){
+var addGallery = function(database, title, img_info, name, callback){
     var gallery = new database.GalleryModel({
-        name: name, title: title, img_url: img_url, date: Date.now()
+        name: name, title: title, img_url: img_info.url, date: Date.now(), public_id: img_info.id
     });
     
     gallery.save(function(err){
