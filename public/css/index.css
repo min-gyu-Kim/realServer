@@ -399,6 +399,9 @@ article{
 }
 
 @media (max-width: 380px){
+    .container{
+        width: 100%;
+    }
     .contents{
         margin:auto;
     }
@@ -406,7 +409,7 @@ article{
         width: 90%;
         text-align: center;
     }
-    
+    /*
     h2, h3{
         font-size: 50px; 
     }
@@ -417,5 +420,5 @@ article{
     
     ul li a{
         font-size: 25px;
-    }
+    }*/
 }
